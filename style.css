@@ -1,0 +1,50 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Center Header */
+h2 {
+    color: #343a40;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Search Bar Styling */
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-family: serif;
+}
+
+/* Table Styling */
+.table {
+    background-color: #ffffff;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Modal Styling */
+.modal-header {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.modal-footer button {
+    min-width: 100px;
+    
+}

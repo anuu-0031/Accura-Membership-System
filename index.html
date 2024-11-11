@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accura Member Management</title>
+    <!-- Bootstrap CSS for responsive design -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Accura Member Management</h2>
+
+        <!-- Search Bar -->
+        <div class="search-bar mb-4">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search by Last Name...">
+        </div>
+
+        <!-- Member List Table -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>DS Division</th>
+                    <th>Date of Birth</th>
+                    <th>Summary</th>
+                  
+                </tr>
+            </thead>
+            <tbody id="memberList">
+                <!-- Dynamic Content Loaded Here -->
+            </tbody>
+        </table>
+
+        <!-- Add New Member Button -->
+        <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#addMemberModal">Add New Member</button>
+
+        <!-- Add/Edit Member Modal -->
+        <div class="modal fade" id="addMemberModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="addMemberForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Add New Member</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="last_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dsDivision">DS Division</label>
+                                <select class="form-control" id="dsDivision" name="ds_division" required>
+                                    <option value="Colombo 1">Colombo 1</option>
+                                    <option value="Colombo 2">Colombo 2</option>
+                                    <option value="Colombo 3">Colombo 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth</label>
+                                <input type="date" class="form-control" id="dateOfBirth" name="date_of_birth" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="summary">Summary</label>
+                                <textarea class="form-control" id="summary" name="summary"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" id="resetButton">Reset</button>
+                            <button type="submit" class="btn btn-primary">Save Member</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery, Bootstrap JS, and custom JS script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
